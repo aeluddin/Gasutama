@@ -61,6 +61,50 @@
         <!-- Section Layanan -->
         <section id="layanan">
             <div class="container">
+
+                <p><span style="font-size: 14pt; "><strong>WE BUILD YOUR
+                            DREAM</strong></span></p>
+                <p><span style="font-size: 12pt; ">We are a general contractor
+                        company that provides comprehensive construction services, starting from the planning stage to
+                        the construction stage so that costs become more efficient.</span></p>
+                <p><span style="font-size: 12pt; ">Kami merupakan perusahaan
+                        general kontraktor yang melayani jasa kontruksi secara menyeluruh, dimulai dari tahap
+                        perencanaan hingga tahap konstruksi sehingga biaya pembangunan menjadi lebih efisien dan
+                        terjangkau.</span></p>
+                <h2><span style="font-size: 14pt; "><strong>VISI</strong></span></h2>
+                <p><span style="font-size: 12pt; ">Menjadi perusahaan penyedia
+                        jasa kontruksi yang berintegritas tinggi, inovatif dan terpercaya serta memberikan pelayanan
+                        yang memuaskan.</span></p>
+                <p style="text-align: center;"><span
+                        style="font-size: 12pt; "><em>To become a construction
+                            service provider company with high integrity, innovative and trustworthy and provide
+                            satisfactory service</em></span></p>
+                <h2><span style="font-size: 14pt; "><strong>MISI</strong></span></h2>
+                <ol>
+                    <li><span style="font-size: 12pt; ">Mengutamakan
+                            profesionalisme dan kompetensi dalam menjalin.<br /></span><span
+                            style=" font-size: 12pt;">Prioritizing
+                            professionalism and competence in establishing cooperation</span><span
+                            style=" font-size: 12pt;">.</span></li>
+                </ol>
+                <ol start="2">
+                    <li><span style="font-size: 12pt; ">Berkontribusi penuh
+                            dalam memberikan wadah bagi sumber daya manusia unggul untuk tumbuh dan
+                            maju.<br />Fully contribute in providing a place for superior human resources to grow
+                        and advance together.</li>
+                </ol>
+                <ol start="3">
+                    <li><span style="font-size: 12pt; ">Menerapkan sistem BMW
+                            ( Biaya, Mutu dan Waktu).<br /></span><span
+                            style=" font-size: 12pt;">Implementing the BMW
+                            system (Cost, Quality and Time).</span></li>
+                </ol>
+                <p><br /><br /></p>
+            </div>
+        </section>
+
+        <section id="layanan">
+            <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
                         <h1>Our Service</h1>
