@@ -24,7 +24,10 @@
             <li class="nav-item  {{ Request::is('dashboard/ourclient*') ? 'active' : '' }}">
                 <a class="nav-link" aria-current="page" href="/dashboard/ourclient"><i class="bi bi-stickies-fill"></i><span>Our Client</span> </a>
             </li>
-            
+            <li class="nav-item  {{ Request::is('dashboard/news*') ? 'active' : '' }}">
+                <a class="nav-link" aria-current="page" href="{{ route('news.index') }}"><i class="fa fa-newspaper"></i><span>News</span> </a>
+            </li>
+
             <li class=" menu-header">User Manage</li>
             <li class="nav-item  {{ Request::is('dashboard/user*') ? 'active' : '' }}">
                 <a class="nav-link" aria-current="page" href="/dashboard/user"><i class="bi bi-person-lines-fill"></i><span>User</span> </a>

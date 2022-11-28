@@ -2,10 +2,15 @@
 /public/build
 /public/hot
 /public/storage
+/public/news_image/*
+/public/PortoDesain/*
+# /public/product_images/*
+# /public/Sartifikasi/*
+
 /storage/*.key
 /vendor
 .env
-.env.backup
+# .env.backup
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml

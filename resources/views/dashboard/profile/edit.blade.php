@@ -24,8 +24,7 @@
                         <div class="form-group">
                             <label for="title" class="mt-4">Title:</label>
                             <input type="text" id="title" class="form-control @error('title') is-invalid @enderror "
-                                name="title" placeholder="Enter title" value="{{ $Profile_proyek->title }}"
-                                autofocus>
+                                name="title" placeholder="Enter title" value="{{ $Profile_proyek->title }}" autofocus>
                             <span class="text-danger">
                                 @error('title')
                                     {{ $message }}
@@ -42,15 +41,27 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="mt-3">
-                            Jumlah Gambar = {{ $Profile_proyek->images->count() }}
+                        <div class="mb-1">
+                            <label class="form-label">Images</label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-center">
+                                <img src="{{ asset('storage/' . $Profile_proyek->coverImage) }}" class="card-img-top">
+                                <p class="pt-2" style="text-align: justify; font-size: 8pt;">
+                                    {{ $Profile_proyek->coverImage }}
+                            </div>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" name="coverImage" class="custom-file-input" accept="image/*"
+                                id="coverImage">
+                            <label for="files" class="custom-file-label">Cover Image</label>
                         </div>
                         <div class="row mt-3">
                             @foreach ($Profile_proyek->images as $image)
                                 <div class="col-md-4">
-                                    <div class="card mb-3 border-danger">
+                                    <div class="card mb-2 border-danger">
                                         <div class="card-body text-center">
-                                            <img src="_images/{{ $image->image }}" class="card-img-top">
+                                            <img src="{{ asset('product_images/' . $image->image) }}" class="card-img-top">
                                             <p class="pt-2" style="text-align: justify; font-size: 8pt;">
                                                 {{ $image->image }}</p>
                                             <a href="/dashboard/profile/delete-image/{{ $image->id }}"
@@ -61,9 +72,10 @@
                             @endforeach
                         </div>
 
-                        <div class="custom-file">
-                            <input type="file" name="images[]" class="custom-file-input" accept="image/*" id="customFile" multiple>
-                            <label for="files" class="custom-file-label">Upload Images</label>
+                        <div class="custom-file mt-2">
+                            <input type="file" name="images[]" class="custom-file-input" accept="image/*" id="customFile"
+                                multiple>
+                            <label for="files" class="custom-file-label">Upload Images:</label>
                         </div>
                         <div class="mt-3">
                             <label for="deskripsi" class="form-label">Deskripsi</label>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\News;
 use App\Models\OurClient;
 use App\Models\PortoDesain;
 use App\Models\Profile_proyek;
@@ -23,6 +24,7 @@ return new class extends Migration
             $table->foreignIdFor(PortoDesain::class)->nullable();
             $table->foreignIdFor(Sartifikasi::class)->nullable();
             $table->foreignIdFor(OurClient::class)->nullable();
+            $table->foreignIdFor(News::class)->nullable();
             $table->string('image');
             $table->timestamps();
         });
