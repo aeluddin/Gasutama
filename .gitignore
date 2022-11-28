@@ -4,8 +4,8 @@
 /public/storage
 /public/news_image/*
 /public/PortoDesain/*
-# /public/product_images/*
-# /public/Sartifikasi/*
+/public/product_images/*
+/public/Sartifikasi/*
 
 /storage/*.key
 /vendor
