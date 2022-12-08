@@ -117,7 +117,7 @@ body {
   font-size: 52px;
   line-height: 72px;
   background-position: center;
-  background-color: rgba(48, 67, 122, 0.5);
+  background-color: rgba(122, 48, 48, 0.5);
   border-radius: 15px;
   margin: 0px auto 0px auto;
   padding: 5px;
@@ -138,6 +138,23 @@ body {
   z-index: 11;
 }
 
+.hero-tagline h3{
+    position: fixed;
+    width: 1020px;
+    height: 78px;
+    left: 170px;
+    top: 220px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 72px;
+    background-position: center;
+    /* background-color: rgba(122, 48, 48, 0.5); */
+    border-radius: 15px;
+    margin: 0px auto 0px auto;
+    padding: 2px;
+    z-index: 11;
+  }
 /* ABOUT */
 /* .about-title h1{
   position: absolute;
@@ -342,3 +359,6 @@ color: #30437C;
   height: 100%;
   object-fit: cover;
 } */
+
+
+

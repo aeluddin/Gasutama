@@ -37,7 +37,7 @@
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{{ asset('/frontend/Assets/img/Slide_1.jpeg') }}" alt="">
+            <div class="swiper-slide"><img src="{{ asset('/frontend/Assets/img/slide (1).jpeg') }}" alt="">
                 <div class="hero-tagline">
                     <h1>
                         WELCOME TO GASUTAMA KONSTRUKSI
@@ -47,25 +47,25 @@
                     </h2>
                 </div>
             </div>
-            <div class="swiper-slide"><img src="{{ asset('/frontend/Assets/img/Slide_1.jpeg') }}" alt="">
+            <div class="swiper-slide"><img src="{{ asset('/frontend/Assets/img/slide (2).jpeg') }}" alt="">
                 <div class="hero-tagline">
-                    <h1>
-                        WELCOME TO GASUTAMA KONSTRUKSI
-                    </h1>
+                    <h3>
+                        KAMI MERUPAKAN PERUSAHAAN YANG MELAYANI JASA RANCANG DAN BANGUN
+                    </h3>
                     <h2>
-                        We have vast experience in architecture & interior works across multinational companies and
-                        global intuitions
+                        {{-- LETAK TULISAN BISA DISESUAIKAN LAGI, UNTUK FONT USAHAKAN SAMAKAN DENGAN DI LOGO (ANTAPANI)
+ukuran tolong sesuain aja ridru --}}
                     </h2>
                 </div>
             </div>
-            <div class="swiper-slide"><img src="{{ asset('/frontend/Assets/img/Slide_1.jpeg') }}" alt="">
+            <div class="swiper-slide"><img src="{{ asset('/frontend/Assets/img/slide (3).jpeg') }}" alt="">
                 <div class="hero-tagline">
-                    <h1>
-                        WELCOME TO GASUTAMA KONSTRUKSI
-                    </h1>
+                    <h3>
+                        TIM KAMI TERDIRI DARI MULTI DISIPLIN KHUSUSNYA DIBIDANG KONSTRUKSI
+                    </h3>
                     <h2>
-                        We are team which consist of the best talents and profesionals in the architecture and interior
-                        design
+                        {{-- LETAK TULISAN BISA DISESUAIKAN LAGI, UNTUK FONT USAHAKAN SAMAKAN DENGAN DI LOGO (ANTAPANI)
+                        ukuran tolong sesuain aja ridru --}}
                     </h2>
                 </div>
             </div>

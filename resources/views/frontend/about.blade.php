@@ -24,6 +24,7 @@
 
     <!--link responsive.css-->
     <link rel="stylesheet" href="{{ asset('frontend/responsive.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
 
 </head>
 
@@ -75,8 +76,7 @@
                 <p><span style="font-size: 12pt; ">Menjadi perusahaan penyedia
                         jasa kontruksi yang berintegritas tinggi, inovatif dan terpercaya serta memberikan pelayanan
                         yang memuaskan.</span></p>
-                <p style="text-align: center;"><span
-                        style="font-size: 12pt; "><em>To become a construction
+                <p style="text-align: center;"><span style="font-size: 12pt; "><em>To become a construction
                             service provider company with high integrity, innovative and trustworthy and provide
                             satisfactory service</em></span></p>
                 <h2><span style="font-size: 14pt; "><strong>MISI</strong></span></h2>
@@ -91,12 +91,11 @@
                     <li><span style="font-size: 12pt; ">Berkontribusi penuh
                             dalam memberikan wadah bagi sumber daya manusia unggul untuk tumbuh dan
                             maju.<br />Fully contribute in providing a place for superior human resources to grow
-                        and advance together.</li>
+                            and advance together.</li>
                 </ol>
                 <ol start="3">
                     <li><span style="font-size: 12pt; ">Menerapkan sistem BMW
-                            ( Biaya, Mutu dan Waktu).<br /></span><span
-                            style=" font-size: 12pt;">Implementing the BMW
+                            ( Biaya, Mutu dan Waktu).<br /></span><span style=" font-size: 12pt;">Implementing the BMW
                             system (Cost, Quality and Time).</span></li>
                 </ol>
                 <p><br /><br /></p>
@@ -208,12 +207,42 @@
 
 
             </ul>
+            <div class="text-center col-6">
+
+                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                    <div class="card m-3" style="width: 18rem;">
+                        <img src="{{ asset('/frontend/Assets/img/logo small.png') }}" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <p class="card-text">1</p>
+                        </div>
+                    </div>
+                    <div class="card m-3" style="width: 18rem;">
+                        <img src="{{ asset('/frontend/Assets/img/logo small.png') }}" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <p class="card-text">1</p>
+                        </div>
+                    </div>
+                    <div class="card m-3" style="width: 18rem;">
+                        <img src="{{ asset('/frontend/Assets/img/logo small.png') }}" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <p class="card-text">1</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
+
 
         @include('frontend.layout.footer')
 
 
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 
     <!-- Swiper JS -->
     <script src="{{ asset('https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js') }}"></script>
