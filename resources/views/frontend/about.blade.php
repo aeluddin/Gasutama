@@ -38,10 +38,14 @@
             <div class="container h-100">
                 <div class="row h-100">
                     <div class="col-md-6 text-about">
-                        <h1>WELCOME TO GASUTAMA KONSTRUKSI, WE BUILD YOUR DREAM</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's hdb ubdfbd uhsfbdsi ihcsnfwe ihsh uheswfcd icbwf uivbs icb ceiubcw ibcfw
-                            fibfew dibwfufw iwecwefbiadbfw ieuhbfewf ncse</p>
+                        <h1>WE BUILD YOUR DREAM</h1>
+                        <p><span style="font-size: 12pt; ">We are a general contractor
+                            company that provides comprehensive construction services, starting from the planning stage to
+                            the construction stage so that costs become more efficient.</span></p>
+                    <p><span style="font-size: 12pt; ">Kami merupakan perusahaan
+                            general kontraktor yang melayani jasa kontruksi secara menyeluruh, dimulai dari tahap
+                            perencanaan hingga tahap konstruksi sehingga biaya pembangunan menjadi lebih efisien dan
+                            terjangkau.</span></p>
                         <div class="swiper mySwiper swiper1">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img src="{{ asset('/frontend/Assets/img/Slide_1.jpeg') }}"
@@ -62,16 +66,6 @@
         <!-- Section Layanan -->
         <section id="layanan">
             <div class="container">
-
-                <p><span style="font-size: 14pt; "><strong>WE BUILD YOUR
-                            DREAM</strong></span></p>
-                <p><span style="font-size: 12pt; ">We are a general contractor
-                        company that provides comprehensive construction services, starting from the planning stage to
-                        the construction stage so that costs become more efficient.</span></p>
-                <p><span style="font-size: 12pt; ">Kami merupakan perusahaan
-                        general kontraktor yang melayani jasa kontruksi secara menyeluruh, dimulai dari tahap
-                        perencanaan hingga tahap konstruksi sehingga biaya pembangunan menjadi lebih efisien dan
-                        terjangkau.</span></p>
                 <h2><span style="font-size: 14pt; "><strong>VISI</strong></span></h2>
                 <p><span style="font-size: 12pt; ">Menjadi perusahaan penyedia
                         jasa kontruksi yang berintegritas tinggi, inovatif dan terpercaya serta memberikan pelayanan
@@ -207,34 +201,43 @@
 
 
             </ul>
-            <div class="text-center col-6">
+        </section>
+        <section id="our-partner">
+            <div class="container text-center">
+                <h1>Patner Kami</h1>
+                <br>
+            </div><br>
 
-                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-                    <div class="card m-3" style="width: 18rem;">
-                        <img src="{{ asset('/frontend/Assets/img/logo small.png') }}" class="card-img-top"
-                            alt="...">
-                        <div class="card-body">
-                            <p class="card-text">1</p>
-                        </div>
+            <div class="d-flex justify-content-center">
+                <div class="text-center col-8">
+                    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                        @forelse ($datas as $data)
+                            <div class="card m-3 border border-0 bg-transparent " style="width: 18rem;">
+                                <div class="m-2">
+                                    <img src="{{ asset('OurClient/'. $data->images[0]->image) }}"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        {{ $data->title }}
+                                    </div>
+                                </div>
+                            </div>
+                        @empty
+                            <div class="card m-3 border border-0 bg-transparent" style="width: 18rem;">
+                                <div class="m-2">
+                                    <img src="{{ asset('/frontend/Assets/img/logo small.png') }}"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">Contoh</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforelse
                     </div>
-                    <div class="card m-3" style="width: 18rem;">
-                        <img src="{{ asset('/frontend/Assets/img/logo small.png') }}" class="card-img-top"
-                            alt="...">
-                        <div class="card-body">
-                            <p class="card-text">1</p>
-                        </div>
-                    </div>
-                    <div class="card m-3" style="width: 18rem;">
-                        <img src="{{ asset('/frontend/Assets/img/logo small.png') }}" class="card-img-top"
-                            alt="...">
-                        <div class="card-body">
-                            <p class="card-text">1</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
+
+
 
 
         @include('frontend.layout.footer')

@@ -18,6 +18,7 @@ use App\Http\Controllers\PortoDesainController;
 use App\Http\Controllers\SartifikasiController;
 use App\Http\Controllers\ProfileProjectController;
 use App\Http\Controllers\UserController;
+use App\Models\OurClient;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,7 +68,9 @@ Route::get('/', function() {
 })->name('home');
 
 Route::get('/about', function() {
-    return view('frontend.about');
+    return view('frontend.about',[
+        'datas' => OurClient::get()
+    ]);
 })->name('about');
 
 Route::get('/contact', function() {
