@@ -7,6 +7,8 @@ use App\Models\Image;
 use Illuminate\Http\Request;
 use App\Models\Profile_proyek;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
+
 
 class ProfileProjectController extends Controller
 {
@@ -20,8 +22,7 @@ class ProfileProjectController extends Controller
         $categorys = Category::get();
         $data = Profile_proyek::filter(request(['search','category']))->paginate(5);
         // dd($Profile_proyek);
-        return view(
-            'dashboard.profile.create',
+        return view('dashboard.profile.create',
             compact('data','categorys'),
             [
                 'title' => 'Create Profile Proyek'
@@ -45,8 +46,9 @@ class ProfileProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $req)
-    {   
+    {
         //return $req->file('coverImage')->store('cover-image');
+
         $data = $req->validate([
             'title' => 'required|unique:profile_proyeks',
             'category_id' => 'required',
@@ -59,8 +61,6 @@ class ProfileProjectController extends Controller
         if($req->file('coverImage')){
             $data['coverImage'] = $req->file('coverImage')->store('cover-image');
         }
-
-        // dd($data);
 
         $new_product = Profile_proyek::create($data);
 
@@ -107,6 +107,7 @@ class ProfileProjectController extends Controller
         }
         $categorys = Category::all();
         $data = Profile_proyek::paginate('5');
+
         // dd($Profile_proyek);
         return view(
             'dashboard.profile.edit',
@@ -126,12 +127,19 @@ class ProfileProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $data1 = Profile_proyek::find($id);
+        $data1 = Profile_proyek::find($id);
         $data = $request->validate([
             'title' => 'required',
             'category_id' => 'required',
+            'coverImage' => 'image',
             'deskripsi'=> ''
         ]);
+        if($request->file('coverImage')){
+            if ($data1->coverImage) {
+                Storage::delete($data1->coverImage);
+            }
+            $data['coverImage'] = $request->file('coverImage')->store('cover-image');
+        }
         $data['slug'] = Str::slug($request->title);
         Profile_proyek::where('id', $id)
             ->update($data);
@@ -158,7 +166,7 @@ class ProfileProjectController extends Controller
     {
         $data = Profile_proyek::find($id);
         $images = $data->images;
-
+        Storage::delete($data->coverImage);
         if (!$data->id) abort(404); {
             foreach ($images as $image) {
                 // dd($image->id);
